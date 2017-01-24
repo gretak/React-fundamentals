@@ -2,9 +2,11 @@ var React = require('react');
 var ConfirmBattle = require('../components/ConfirmBattle');
 
 var ConfirmBattleContainer = React.createClass({
+
   contextTypes: {
     router: React.PropTypes.object.isRequired
   },
+  
   getInitialState: function () {
     console.log('getInitialState')
     return {
@@ -30,7 +32,7 @@ var ConfirmBattleContainer = React.createClass({
   render: function() {
     return (
       <ConfirmBattle 
-      isLodaing={this.state.isLoading}
+      isLoading={this.state.isLoading}
       playersInfo={this.state.playersInfo}
       />
     )
